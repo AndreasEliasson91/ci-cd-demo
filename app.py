@@ -1,10 +1,18 @@
+"""
+Main API module
+"""
+
 import json
 
-from flask import Flask, Response, request
 from db import users
+from flask import Flask, Response, request
 
 
-def create_app():
+def create_app() -> Flask:
+    """
+    Flask factory function
+    :return: Flask app obj
+    """
     app = Flask(__name__)
 
     @app.get('/api/v1.0/users')
