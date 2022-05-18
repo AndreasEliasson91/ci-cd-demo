@@ -4,8 +4,8 @@ Main API module
 
 import json
 
-from db import users
 from flask import Flask, Response, request
+from db import users
 
 
 def create_app() -> Flask:
